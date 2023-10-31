@@ -1,5 +1,6 @@
 import { useContext } from "react";
 import { Link, useNavigate } from "react-router-dom";
+import { Home, FileText, Tag, PlusSquare, User, LogOut} from 'react-feather'
 
 import { AuthContext } from "../../contexts/AuthContext";
 
@@ -20,13 +21,16 @@ function Navbar() {
       >
         <div className="container flex justify-between text-lg">
           <Link to="/home" className="text-2xl font-bold">
-            Blog Pessoal
+          <Home size={25} />
           </Link>
 
           <div className="flex gap-4">
-            Postagens Temas Cadastrar tema Perfil
+            <FileText size={25} />
+            <Link to='/temas' className='hover:underline'><Tag size={25} /></Link>
+            <Link to='/' className='hover:underline'><PlusSquare size={25} /></Link>
+            <Link to='/' className='hover:underline'><User size={25} /></Link>
             <Link to="" onClick={logout} className="hover:underline">
-              Sair
+            <Link to='/' className='hover:underline'><LogOut size={25} /></Link>
             </Link>
           </div>
         </div>
