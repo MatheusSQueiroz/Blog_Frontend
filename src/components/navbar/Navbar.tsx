@@ -16,20 +16,20 @@ function Navbar() {
   return (
     <>
       <div
-        className="w-full bg-indigo-900 text-white
+        className="w-full bg-primary text-white
                 flex justify-center py-4"
       >
         <div className="container flex justify-between text-lg">
-          <Link to="/home" className="text-2xl font-bold">
+          <Link to="/home" className="text-2xl font-bold" title="Página Inicial">
           <Home size={25} />
           </Link>
 
           <div className="flex gap-4">
-            <FileText size={25} />
-            <Link to='/temas' className='hover:underline'><Tag size={25} /></Link>
-            <Link to='/' className='hover:underline'><PlusSquare size={25} /></Link>
-            <Link to='/' className='hover:underline'><User size={25} /></Link>
-            <Link to="" onClick={logout} className="hover:underline">
+          <Link to='/temas' className='hover:underline' title="Postagens"><FileText size={25} /></Link>
+            <Link to='/temas' className='hover:underline' title="Temas"><Tag size={25} /></Link>
+            <Link to='/' className='hover:underline' title="Cadastrar Temas"><PlusSquare size={25} /></Link>
+            <Link to='/' className='hover:underline' title="Perfil"><User size={25} /></Link>
+            <Link to="" onClick={logout} className="hover:underline" title="Deslogar">
             <Link to='/' className='hover:underline'><LogOut size={25} /></Link>
             </Link>
           </div>
